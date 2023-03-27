@@ -5,122 +5,137 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".otpverification_page"
-    android:background="@drawable/backgroundimage">
-
+    android:background="@drawable/backgroundimage"
+    >
 
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="650dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/rectangle"
         android:orientation="vertical"
-        android:padding="20dp"
-        >
+        android:padding="20dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Otp code verification"
-            android:textStyle="bold"
-            android:textSize="20dp"
             android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
 
-            >
+            tools:ignore="HardcodedText">
 
         </TextView>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
             android:text="Enter the code we sent on to your mobile number"
             android:textSize="14dp"
-            android:layout_marginTop="10dp"
-
             >
 
         </TextView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="20dp"
-
+            android:orientation="horizontal"
 
 
             >
+
             <EditText
                 android:layout_width="58.3dp"
                 android:layout_height="56dp"
                 android:background="@drawable/angle"
 
 
-                >
+                tools:ignore="SpeakableTextPresentCheck">
+
             </EditText>
+
             <EditText
                 android:layout_width="58.3dp"
                 android:layout_height="56dp"
-                android:background="@drawable/angle"
                 android:layout_marginLeft="4dp"
-                >
+                android:background="@drawable/angle"
+                tools:ignore="SpeakableTextPresentCheck">
+
             </EditText>
+
             <EditText
                 android:layout_width="58.3dp"
                 android:layout_height="56dp"
-                android:background="@drawable/angle"
                 android:layout_marginLeft="4dp"
-                >
+                android:background="@drawable/angle"
+                tools:ignore="SpeakableTextPresentCheck">
+
             </EditText>
+
+            <EditText
+                android:layout_width="58.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/angle"
+                tools:ignore="SpeakableTextPresentCheck">
+
+            </EditText>
+
             <EditText
                 android:layout_width="58.3dp"
                 android:layout_height="56dp"
-                android:background="@drawable/angle"
                 android:layout_marginLeft="4dp"
-                >
+                android:background="@drawable/angle"
+                tools:ignore="SpeakableTextPresentCheck">
+
             </EditText>
+
             <EditText
                 android:layout_width="58.3dp"
                 android:layout_height="56dp"
-                android:background="@drawable/angle"
                 android:layout_marginLeft="4dp"
-                >
-            </EditText>
-            <EditText
-                android:layout_width="58.3dp"
-                android:layout_height="56dp"
                 android:background="@drawable/angle"
-                android:layout_marginLeft="4dp"
-                >
+                tools:ignore="LabelFor,SpeakableTextPresentCheck">
+
             </EditText>
         </LinearLayout>
 
         <android.support.v7.widget.CardView
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="6dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="7dp"
 
             >
+
             <Button
 
                 android:layout_width="370dp"
                 android:layout_height="56dp"
                 android:background=" #F37B17"
                 android:text="Verify Otp"
-                android:textColor="@color/white"
+                android:textColor="#263238"
 
                 >
 
             </Button>
 
 
-
         </android.support.v7.widget.CardView>
+
         <LinearLayout
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -128,15 +143,16 @@
                 android:textAlignment="center"
 
                 >
+
             </TextView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:text="Resend"
                 android:textColor="#FF5722"
-                android:textStyle="bold"
-                android:layout_marginLeft="5dp"
-                >
+                android:textStyle="bold">
 
             </TextView>
 
