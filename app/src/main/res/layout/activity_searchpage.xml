@@ -86,29 +86,29 @@
 
     </LinearLayout>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    >
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/searchicon"
-        android:layout_marginLeft="20dp">
-
-    </ImageView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="We couldn’t find any results for “Biryani Pizza”"
-        android:textSize="40px"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center">
 
-    </TextView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/searchicon">
 
-</LinearLayout>
+        </ImageView>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="We couldn’t find any results for “Biryani Pizza”"
+            android:textSize="40px">
+
+        </TextView>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
