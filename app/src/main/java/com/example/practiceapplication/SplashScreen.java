@@ -19,7 +19,9 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 Intent b = new Intent(SplashScreen.this,Introductionpage.class);
+                b.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(b);
+                finish();
 
             }
         },1500);
