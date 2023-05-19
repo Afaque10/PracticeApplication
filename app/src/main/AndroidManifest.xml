@@ -78,7 +78,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".login_page"
+            android:name=".registerphonenumber"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

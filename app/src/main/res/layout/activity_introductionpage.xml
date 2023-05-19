@@ -82,6 +82,7 @@ of restaurants"
 
             </TextView>
             <TextView
+                android:id="@+id/login_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Login"
@@ -96,6 +97,7 @@ of restaurants"
     </LinearLayout>
 
     <Button
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

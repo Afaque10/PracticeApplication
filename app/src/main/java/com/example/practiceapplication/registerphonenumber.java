@@ -3,11 +3,11 @@ package com.example.practiceapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class login_page extends AppCompatActivity {
+public class registerphonenumber extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page2);
+        setContentView(R.layout.activity_registerphonenumber);
     }
 }

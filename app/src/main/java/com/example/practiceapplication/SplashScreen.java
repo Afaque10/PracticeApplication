@@ -1,8 +1,10 @@
 package com.example.practiceapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -15,13 +17,32 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        boolean previousStarted = prefs.getBoolean(getString(R.string.pref_previously_started),false);
+
+
+
+
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent b = new Intent(SplashScreen.this,Introductionpage.class);
-                b.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(b);
-                finish();
+                if(!previousStarted){
+                    SharedPreferences.Editor edit = prefs.edit();
+                    edit.putBoolean(getString(R.string.pref_previously_started), Boolean.TRUE);
+                    edit.commit();
+                    Intent b = new Intent(SplashScreen.this,Introductionpage.class);
+                    b.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(b);
+                    finish();
+                }
+                else{
+                    Intent b = new Intent(SplashScreen.this,registerphonenumber.class);
+                    b.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(b);
+                    finish();
+                }
+
 
             }
         },1500);
