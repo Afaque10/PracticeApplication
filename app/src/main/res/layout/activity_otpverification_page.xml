@@ -115,7 +115,7 @@
             >
 
             <Button
-
+                android:id="@+id/click"
                 android:layout_width="370dp"
                 android:layout_height="56dp"
                 android:background=" #F37B17"

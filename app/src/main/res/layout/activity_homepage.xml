@@ -1313,6 +1313,7 @@
         </ImageView>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/cart_button"
         android:gravity="center"
         android:layout_width="75dp"
         android:layout_height="match_parent">

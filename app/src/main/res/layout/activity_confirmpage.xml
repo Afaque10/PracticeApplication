@@ -432,6 +432,7 @@
         app:cardCornerRadius="6dp">
 
       <Button
+          android:id="@+id/paynow"
           android:layout_width="190dp"
           android:layout_height="44dp"
           android:background="#F17006"

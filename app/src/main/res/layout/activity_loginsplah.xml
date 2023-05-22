@@ -372,6 +372,7 @@
         android:layout_height="wrap_content"
       app:cardCornerRadius="6dp">
       <Button
+          android:id="@+id/pay"
           android:layout_width="190dp"
           android:layout_height="44dp"
           android:text="Proceed to pay"
