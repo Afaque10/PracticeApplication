@@ -53,6 +53,7 @@
             >
 
             <EditText
+                android:gravity="center"
                 android:id="@+id/otp1"
                 android:maxLength="1"
                 android:inputType="number"
@@ -64,6 +65,7 @@
             </EditText>
 
             <EditText
+                android:gravity="center"
                 android:id="@+id/otp2"
                 android:maxLength="1"
                 android:inputType="number"
@@ -76,6 +78,7 @@
             </EditText>
 
             <EditText
+                android:gravity="center"
                 android:id="@+id/otp3"
                 android:maxLength="1"
                 android:inputType="number"
@@ -88,6 +91,7 @@
             </EditText>
 
             <EditText
+                android:gravity="center"
                 android:id="@+id/otp4"
                 android:maxLength="1"
                 android:inputType="number"
@@ -100,6 +104,7 @@
             </EditText>
 
             <EditText
+                android:gravity="center"
                 android:id="@+id/otp5"
                 android:maxLength="1"
                 android:inputType="number"
