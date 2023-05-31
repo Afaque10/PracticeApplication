@@ -1,21 +1,28 @@
 package com.example.practiceapplication;
 
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 public class formpage extends AppCompatActivity {
+    final Handler handler =new Handler(Looper.getMainLooper());
 
     EditText nameedittext,addressedittext,dateofbirthedittext,genderdeittext,phonenumberedittext;
     Button submitbutton;
+    ProgressBar Prgs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formpage);
+
+        Prgs=(ProgressBar) findViewById(R.id.loading);
 
         nameedittext=(EditText) findViewById(R.id.name);
         addressedittext=(EditText) findViewById(R.id.address);
@@ -40,7 +47,16 @@ public class formpage extends AppCompatActivity {
                 v.putExtra("Dob",dobdata);
                 v.putExtra("Gender",genderdata);
                 v.putExtra("number",numberdata);
-                startActivity(v);
+                Prgs.setVisibility(View.VISIBLE);
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Prgs.setVisibility(View.VISIBLE);
+                        startActivity(v);
+                    }
+                },1500);
+
+
 
             }
         });
