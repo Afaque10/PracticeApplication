@@ -3,7 +3,6 @@ package com.example.practiceapplication;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,12 +10,15 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class otpverification_page extends AppCompatActivity {
     final Handler handler = new Handler(Looper.getMainLooper());
 
+    EditText otpdigitone,otpdigittwo,otpdigitthree,otpdigitfour,otpdigitfive,otpdigitsix;
     Button downbutton;
     ProgressBar Prog;
-    EditText otpdigitone,otpdigittwo,otpdigitthree,otpdigitfour,otpdigitfive;
+
 
 
 
@@ -31,6 +33,7 @@ public class otpverification_page extends AppCompatActivity {
         otpdigitthree=(EditText) findViewById(R.id.otp3);
         otpdigitfour=(EditText) findViewById(R.id.otp4);
         otpdigitfive=(EditText) findViewById(R.id.otp5);
+        otpdigitsix = (EditText) findViewById(R.id.otp6);
 
 
         downbutton=(Button) findViewById(R.id.click);
@@ -51,14 +54,16 @@ public class otpverification_page extends AppCompatActivity {
         String number3 = otpdigitthree.getText().toString().trim();
         String number4 = otpdigitfour.getText().toString().trim();
         String number5 = otpdigitfive.getText().toString().trim();
-        String FinalString = number1+number2+number3+number4+number5;
+        String number6 = otpdigitsix.getText().toString().trim();
 
-        if (number1.isEmpty()||number2.isEmpty()||number3.isEmpty()||number4.isEmpty()||number5.isEmpty())
+        String FinalString = number1+number2+number3+number4+number5+number6;
+
+        if (number1.isEmpty()||number2.isEmpty()||number3.isEmpty()||number4.isEmpty()||number5.isEmpty()||number6.isEmpty())
         {
             Toast.makeText(getApplicationContext(),"Otp Cannot Be Blank",Toast.LENGTH_LONG).show();
         }
         else{
-            if (FinalString.length()!=5)
+            if (FinalString.length()!=6)
             {
                 Toast.makeText(getApplicationContext(),"Invalid Otp",Toast.LENGTH_LONG).show();
             }

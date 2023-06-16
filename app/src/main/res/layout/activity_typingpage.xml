@@ -124,7 +124,7 @@
         </TextView>
 
     </LinearLayout>
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_marginLeft="100dp"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
@@ -149,7 +149,7 @@
             </TextView>
 
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
         <LinearLayout
@@ -193,7 +193,7 @@
                 </TextView>
 
             </LinearLayout>
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="20dp"
                 android:layout_width="96dp"
@@ -244,7 +244,7 @@
 
                     </TextView>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
         <LinearLayout
@@ -289,7 +289,7 @@
                 </TextView>
 
             </LinearLayout>
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
@@ -314,7 +314,7 @@
                     </TextView>
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
         <LinearLayout
@@ -358,7 +358,7 @@
                 </TextView>
 
             </LinearLayout>
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
@@ -383,7 +383,7 @@
                     </TextView>
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
         <LinearLayout
@@ -427,7 +427,7 @@
                 </TextView>
 
             </LinearLayout>
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
@@ -452,7 +452,7 @@
                     </TextView>
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 

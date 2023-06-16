@@ -10,8 +10,10 @@
 
 
 <LinearLayout
+    android:id="@+id/Linearlaypoutsendotp"
     android:layout_width="match_parent"
     android:layout_height="650dp"
+    android:visibility="gone"
     android:layout_alignParentBottom="true"
     android:background="@drawable/rectangle"
     android:orientation="vertical"
@@ -50,7 +52,7 @@
         android:hint="Enter phone number"
         >
     </EditText>
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,7 +73,7 @@
 
 
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
     <ProgressBar
 
         android:id="@+id/loadingbar"
@@ -86,7 +88,8 @@
     </ProgressBar>
 </LinearLayout>
     <LinearLayout
-        android:visibility="gone"
+        android:id="@+id/linearlayoutverifyotp"
+        android:visibility="visible"
         android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -109,6 +112,16 @@
             android:layout_marginTop="20dp"
             android:text="Enter the code we sent on to your mobile number"
             android:textSize="14dp">
+
+        </TextView>
+        <TextView
+            android:padding="15dp"
+            android:id="@+id/phonetextview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="+91 1051515515"
+            android:textColor="@color/black"
+            android:textSize="20dp">
 
         </TextView>
 
@@ -189,7 +202,7 @@
 
         </LinearLayout>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -211,7 +224,7 @@
             </Button>
 
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
 
