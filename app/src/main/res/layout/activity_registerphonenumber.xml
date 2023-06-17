@@ -13,7 +13,7 @@
     android:id="@+id/Linearlaypoutsendotp"
     android:layout_width="match_parent"
     android:layout_height="650dp"
-    android:visibility="gone"
+    android:visibility="visible"
     android:layout_alignParentBottom="true"
     android:background="@drawable/rectangle"
     android:orientation="vertical"
@@ -88,11 +88,12 @@
     </ProgressBar>
 </LinearLayout>
     <LinearLayout
+        android:padding="15dp"
         android:id="@+id/linearlayoutverifyotp"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_marginTop="100dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="700dp"
         android:background="@drawable/rectangle"
         android:orientation="vertical">
 
@@ -118,12 +119,13 @@
             android:padding="15dp"
             android:id="@+id/phonetextview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="+91 1051515515"
             android:textColor="@color/black"
             android:textSize="20dp">
 
         </TextView>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -138,8 +140,8 @@
 
             <EditText
                 android:id="@+id/otp1"
-                android:layout_width="58.3dp"
-                android:layout_height="56dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="@drawable/angle"
                 android:gravity="center"
                 android:inputType="number"
@@ -150,8 +152,8 @@
 
             <EditText
                 android:id="@+id/otp2"
-                android:layout_width="58.3dp"
-                android:layout_height="56dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="4dp"
                 android:background="@drawable/angle"
                 android:gravity="center"
@@ -163,8 +165,8 @@
 
             <EditText
                 android:id="@+id/otp3"
-                android:layout_width="58.3dp"
-                android:layout_height="56dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="4dp"
                 android:background="@drawable/angle"
                 android:gravity="center"
@@ -176,8 +178,8 @@
 
             <EditText
                 android:id="@+id/otp4"
-                android:layout_width="58.3dp"
-                android:layout_height="match_parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="4dp"
                 android:background="@drawable/angle"
                 android:gravity="center"
@@ -189,8 +191,20 @@
 
             <EditText
                 android:id="@+id/otp5"
-                android:layout_width="58.3dp"
-                android:layout_height="56dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/angle"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                tools:ignore="SpeakableTextPresentCheck">
+
+            </EditText>
+            <EditText
+                android:id="@+id/otp6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="4dp"
                 android:background="@drawable/angle"
                 android:gravity="center"
@@ -203,6 +217,7 @@
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -211,7 +226,6 @@
             >
 
             <Button
-                android:layout_marginLeft="30dp"
                 android:id="@+id/click"
                 android:layout_width="350dp"
                 android:layout_height="56dp"

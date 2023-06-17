@@ -48,7 +48,7 @@ public class registerphonenumber extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registerphonenumber);
 
-        Progverify=(ProgressBar) findViewById(R.id.progress);
+        Progverify=(ProgressBar) findViewById(R.id.progressbar);
         Progsend=(ProgressBar) findViewById(R.id.loadingbar);
         numberverify=(EditText) findViewById(R.id.numberphone);
         phonenumbertextview=(TextView) findViewById(R.id.phonetextview);
@@ -89,14 +89,14 @@ public class registerphonenumber extends AppCompatActivity {
         String number4 = otpdigitfour.getText().toString().trim();
         String number5 = otpdigitfive.getText().toString().trim();
         String number6 = otpdigitsix.getText().toString().trim();
-        String finalString = number1 + number2 + number3 + number4 + number5 + number6;
+        String finalotp = number1 + number2 + number3 + number4 + number5 + number6;
 
         if (number1.isEmpty()||number2.isEmpty()||number3.isEmpty()||number4.isEmpty()||number5.isEmpty()||number6.isEmpty()){
 
             Toast.makeText(getApplicationContext(),"Otp Cannot Be Blank",Toast.LENGTH_LONG).show();
         }
         else {
-            if(finalString.length()!=6){
+            if(finalotp.length()!=6){
 
                 Toast.makeText(getApplicationContext(),"Otp Length Less Then Six",Toast.LENGTH_LONG).show();
             }
@@ -120,7 +120,6 @@ public class registerphonenumber extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
             if (task.isSuccessful()){
-
             Progverify.setVisibility(View.GONE);
             Intent x = new Intent(registerphonenumber.this,formpage.class);
             x.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);

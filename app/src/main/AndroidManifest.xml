@@ -16,6 +16,13 @@
         android:theme="@style/Theme.PracticeApplication"
         tools:targetApi="31">
         <activity
+            android:name=".loginspalshscreen"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".detailspage"
             android:exported="false">
             <meta-data
@@ -28,7 +35,6 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
         </activity>
         <activity
             android:name=".homepage"
@@ -87,13 +93,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".otpverification_page"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".registerphonenumber"
             android:exported="false">
             <meta-data
@@ -113,13 +112,12 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
     </application>
 
