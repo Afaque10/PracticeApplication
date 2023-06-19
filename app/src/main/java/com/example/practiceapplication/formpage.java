@@ -15,6 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -24,7 +27,7 @@ import java.util.HashMap;
 public class formpage extends AppCompatActivity {
     final Handler handler =new Handler(Looper.getMainLooper());
 
-    EditText nameedittext,addressedittext,dateofbirthedittext,genderdeittext,phonenumberedittext;
+    EditText nameedittext,addressedittext,dateofbirthedittext,genderdeittext,phonenumberedittext,emailaddressedittext,passwordedittext;
     Button submitbutton;
     ProgressBar Prgs;
     FirebaseAuth mAuth;
@@ -39,6 +42,8 @@ public class formpage extends AppCompatActivity {
         Userref= FirebaseDatabase.getInstance().getReference().child("User");
 
         nameedittext=(EditText) findViewById(R.id.name);
+        emailaddressedittext=(EditText) findViewById(R.id.emailaddress) ;
+        passwordedittext=(EditText) findViewById(R.id.Password) ;
         addressedittext=(EditText) findViewById(R.id.address);
         dateofbirthedittext=(EditText) findViewById(R.id.Dob);
         genderdeittext=(EditText) findViewById(R.id.Gender);
@@ -56,8 +61,10 @@ public class formpage extends AppCompatActivity {
                 String dobdata = dateofbirthedittext.getText().toString().trim();
                 String genderdata = genderdeittext.getText().toString().trim();
                 String numberdata = phonenumberedittext.getText().toString().trim();
+                String emaildata = emailaddressedittext.getText().toString().trim();
+                String passworddata = passwordedittext.getText().toString().trim();
 
-                Intent v = new Intent(getApplicationContext(),detailspage.class);
+                Intent v = new Intent(getApplicationContext(),homepage.class);
                 v.putExtra("name",namedata);
                 v.putExtra("address",addressdata);
                 v.putExtra("Dob",dobdata);
@@ -74,23 +81,43 @@ public class formpage extends AppCompatActivity {
                 userMAP.put("Dob",dobdata);
                 userMAP.put("Gender",genderdata);
                 userMAP.put("PhoneNumber",numberdata);
+                userMAP.put("Email",emaildata);
+                userMAP.put("Password",passworddata);
                 userMAP.put("UID",uid);
 
-                Userref.child(uid).updateChildren(userMAP).addOnCompleteListener(new OnCompleteListener() {
-                    @Override
-                    public void onComplete(@NonNull Task task) {
-                        Prgs.setVisibility(View.GONE);
-                        Toast.makeText(getApplicationContext(),"Login successfully",Toast.LENGTH_LONG).show();
-                        startActivity(v);
-                        finish();
 
 
-                    }
-                });
+
+                           Userref.child(uid).updateChildren(userMAP).addOnCompleteListener(new OnCompleteListener() {
+                               @Override
+                               public void onComplete(@NonNull Task task) {
+                                   if (task.isSuccessful()){
+                                       AuthCredential credentialAuth = EmailAuthProvider.getCredential(emaildata, passworddata);
+                                       mAuth.getCurrentUser().linkWithCredential(credentialAuth).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                           @Override
+                                           public void onComplete(@NonNull Task<AuthResult> task) {
+                                               Prgs.setVisibility(View.GONE);
+                                               Toast.makeText(getApplicationContext(),"Account Created and Login successfully",Toast.LENGTH_LONG).show();
+                                               startActivity(v);
+                                               finish();
+
+                                           }
+                                       });
+                                   }
+                                   else {
+                                       Toast.makeText(formpage.this, "Something went wrong", Toast.LENGTH_LONG).show();
+                                   }
+                               }
+                           });
+
+
+                   }
+               });
+
+
 
             }
-        });
+        }
 
 
-    }
-}
+

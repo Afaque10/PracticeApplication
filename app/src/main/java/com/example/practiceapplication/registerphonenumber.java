@@ -2,9 +2,11 @@ package com.example.practiceapplication;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -37,6 +40,7 @@ public class registerphonenumber extends AppCompatActivity {
     FirebaseAuth mAuth;
     LinearLayout otpsendlayout,otpverifylayout;
     String otpID,phonenumber,finalotp;
+    Button SignButton;
 
 
 
@@ -48,7 +52,11 @@ public class registerphonenumber extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registerphonenumber);
 
+
+
+
         Progverify=(ProgressBar) findViewById(R.id.progressbar);
+        SignButton=(Button) findViewById(R.id.signinbutton);
         Progsend=(ProgressBar) findViewById(R.id.loadingbar);
         numberverify=(EditText) findViewById(R.id.numberphone);
         phonenumbertextview=(TextView) findViewById(R.id.phonetextview);
@@ -66,6 +74,16 @@ public class registerphonenumber extends AppCompatActivity {
         Sendbutton=(Button) findViewById(R.id.in);
         Verifybutton=(Button) findViewById(R.id.click);
 
+
+
+
+        SignButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent x = new Intent(registerphonenumber.this,loginspalshscreen.class);
+                startActivity(x);
+            }
+        });
         Sendbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -195,10 +213,26 @@ public class registerphonenumber extends AppCompatActivity {
                     }).build();
             PhoneAuthProvider.verifyPhoneNumber(phoneAuthOptions);
 
-        }
+
+
+
 
         }
 
+        }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user != null) {
+            // User is signed in
+            Intent mainIntent = new Intent(registerphonenumber.this,homepage.class);
+            mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(mainIntent);
+            finish();
+        }
+    }
 
 
 

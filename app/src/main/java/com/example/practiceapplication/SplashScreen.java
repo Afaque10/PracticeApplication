@@ -29,6 +29,7 @@ public class SplashScreen extends AppCompatActivity {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         boolean previousStarted = prefs.getBoolean(getString(R.string.pref_previously_started),false);
+        boolean loggedin = prefs.getBoolean(getString(R.string.user_logged_in),false);
 
 
 
@@ -47,6 +48,7 @@ public class SplashScreen extends AppCompatActivity {
                     finish();
                 }
                 else{
+
                     Intent intent = new Intent(SplashScreen.this,registerphonenumber.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
 

@@ -44,6 +44,22 @@
 
         </EditText>
         <EditText
+            android:id="@+id/emailaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Email "
+            >
+
+        </EditText>
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password "
+            >
+
+        </EditText>
+        <EditText
             android:id="@+id/number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

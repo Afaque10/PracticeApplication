@@ -26,7 +26,7 @@
         </ImageView>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:orientation="vertical"
@@ -34,7 +34,7 @@
             >
             <LinearLayout
                 android:padding="25dp"
-                android:layout_width="match_parent"
+                android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
@@ -79,6 +79,15 @@
 
 
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/logoutbutton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/logout"
+            >
+
+        </ImageView>
 
     </LinearLayout>
 <LinearLayout
