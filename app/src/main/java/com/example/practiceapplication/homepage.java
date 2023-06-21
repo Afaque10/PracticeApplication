@@ -14,11 +14,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class homepage extends AppCompatActivity {
+public class        homepage extends AppCompatActivity {
 
     LinearLayout cartimage;
     ImageView logoutbutton;
     FirebaseAuth mAuth;
+    ImageView profile;
 
 
 
@@ -28,11 +29,18 @@ public class homepage extends AppCompatActivity {
         setContentView(R.layout.activity_homepage);
 
         logoutbutton=(ImageView) findViewById(R.id.logoutbutton);
+        profile = (ImageView) findViewById(R.id.user);
         mAuth=FirebaseAuth.getInstance();
         cartimage=(LinearLayout) findViewById(R.id.cart_button);
 
 
-
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent c = new Intent(homepage.this,detailspage.class);
+                startActivity(c);
+            }
+        });
         logoutbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
