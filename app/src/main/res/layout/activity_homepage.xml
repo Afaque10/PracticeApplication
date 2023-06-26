@@ -1298,6 +1298,7 @@
         </ImageView>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/list_users"
         android:gravity="center"
         android:layout_width="75dp"
         android:layout_height="match_parent">

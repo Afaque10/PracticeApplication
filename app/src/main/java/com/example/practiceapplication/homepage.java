@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class        homepage extends AppCompatActivity {
 
-    LinearLayout cartimage;
+    LinearLayout cartimage,users;
     ImageView logoutbutton;
     FirebaseAuth mAuth;
     ImageView profile;
@@ -32,6 +32,7 @@ public class        homepage extends AppCompatActivity {
         profile = (ImageView) findViewById(R.id.user);
         mAuth=FirebaseAuth.getInstance();
         cartimage=(LinearLayout) findViewById(R.id.cart_button);
+        users=(LinearLayout) findViewById(R.id.list_users);
 
 
         profile.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +40,13 @@ public class        homepage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent c = new Intent(homepage.this,detailspage.class);
                 startActivity(c);
+            }
+        });
+        users.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent q = new Intent(homepage.this,list_users.class);
+                startActivity(q);
             }
         });
         logoutbutton.setOnClickListener(new View.OnClickListener() {
