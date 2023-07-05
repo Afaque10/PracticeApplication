@@ -7,7 +7,7 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="match_parent"
         app:cardBackgroundColor="#006064"
         app:cardCornerRadius="16dp"
@@ -34,7 +34,7 @@
                        android:text="Name:-  "
                        android:textStyle="bold"
                        android:textColor="@color/white"
-                       android:textSize="20dp"
+                       android:textSize="15dp"
                        >
                    </TextView>
                    <TextView
@@ -44,7 +44,7 @@
                        android:text="John Pedrick"
                        android:textStyle="bold"
                        android:textColor="@color/white"
-                       android:textSize="20dp"
+                       android:textSize="15dp"
                        >
                    </TextView>
                </LinearLayout>
@@ -60,7 +60,7 @@
                        android:text="Gender:-  "
                        android:textStyle="bold"
                        android:textColor="@color/white"
-                       android:textSize="20dp"
+                       android:textSize="15dp"
                        >
                    </TextView>
                    <TextView
@@ -70,7 +70,7 @@
                        android:text="FeMale"
                        android:textStyle="bold"
                        android:textColor="@color/white"
-                       android:textSize="20dp"
+                       android:textSize="15dp"
                        >
                    </TextView>
                </LinearLayout>
@@ -97,7 +97,7 @@
                         android:text="Phone :-  "
                         android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:textSize="20dp"
+                        android:textSize="15dp"
                         >
                     </TextView>
                     <TextView
@@ -107,7 +107,7 @@
                         android:text="1555464545"
                         android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:textSize="20dp"
+                        android:textSize="15dp"
 
                         >
                     </TextView>
@@ -124,17 +124,17 @@
                         android:text="DOB:-  "
                         android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:textSize="20dp"
+                        android:textSize="15dp"
                         >
                     </TextView>
                     <TextView
                         android:id="@+id/card_dob"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="04/08/2004"
+                        android:text="04/08/1504"
                         android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:textSize="20dp"
+                        android:textSize="15dp"
                         >
                     </TextView>
                 </LinearLayout>
@@ -152,7 +152,7 @@
                     android:text="Address:-  "
                     android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     >
                 </TextView>
                 <TextView
@@ -160,7 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Samru baugh"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textColor="@color/white"
                     android:textStyle="bold"
 
