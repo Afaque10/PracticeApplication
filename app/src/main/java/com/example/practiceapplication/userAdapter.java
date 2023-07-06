@@ -58,8 +58,7 @@ public class userAdapter extends FirebaseRecyclerAdapter
         return new userAdapter.userViewholder(view);
     }
 
-    class userViewholder
-            extends RecyclerView.ViewHolder {
+    class userViewholder extends RecyclerView.ViewHolder {
         TextView Nameholder,Genderholder,Phoneholder,Dobholder,Addressholder;
         public userViewholder(@NonNull View itemView)
         {

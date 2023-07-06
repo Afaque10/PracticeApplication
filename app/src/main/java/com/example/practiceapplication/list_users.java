@@ -10,10 +10,10 @@ import android.view.View;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 public class list_users extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
     userAdapter adapter;
     DatabaseReference mbase;
 
@@ -23,8 +23,8 @@ public class list_users extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_users);
 
-        mbase= FirebaseDatabase.getInstance().getReference();
-        recyclerView = findViewById(R.id.user_recyclerview);
+        mbase= FirebaseDatabase.getInstance().getReference().child("User");
+        RecyclerView recyclerView = findViewById(R.id.user_recyclerview);
 
 
         recyclerView.setLayoutManager(
@@ -36,7 +36,9 @@ public class list_users extends AppCompatActivity {
                 .build();
         adapter = new userAdapter(options);
         recyclerView.setAdapter(adapter);
+
     }
+
     @Override protected void onStart()
     {
         super.onStart();
